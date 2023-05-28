@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3f3f46;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+p {
+  color: #3f3f46;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 2em !important;
+  text-align: justify;
+}
+
+p.math {
+  font-size: 2em;
+  text-align: center;
+}
+
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.table thead tr th,
+tbody tr td,
+tbody tr th {
+  color: #3f3f46;
+  font-family: "Open Sans";
+  line-height: 1.2em !important;
+}
+
+.fs-6 {
+  font-size: 1.2em !important;
+}
+
+.btn-check-answer {
+  font-size: 1em;
+  padding: 0.5em 0.7em;
+  background-color: #04c5d7;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.btn-check-answer:hover {
+  background-color: #039dab;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #fff;
+}
+
+.navbar-nav a {
+  color: #fff !important;
+  font-family: "Roboto";
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+
+.navbar-nav a:hover {
+  color: #b0b0b0 !important;
+}
+
+/* Accordion */
+.accordion-button {
+  font-family: "Roboto";
+  font-weight: 500;
+  text-decoration: none;
+  color: #3f3f46;
+}
+
+.list-course-child {
+  font-family: "Roboto";
+  font-weight: 300;
+  text-decoration: none;
+  color: #3f3f46;
+}
+
+.list-course-child:hover {
+  text-decoration: underline;
+  color: #3f3f46;
+}
+
+.course-active {
+  font-weight: 500;
+}
+
+.course ol li,
+ul li {
+  color: #3f3f46;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 2em !important;
+}
+
+/* Btn next back */
+#next,
+#back,
+.end,
+.next,
+.back {
+  font-size: 1em;
+  padding: 0.5em 0.7em;
+  border-radius: 2px;
+}
+
+/* Footer */
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+@media screen and (max-width: 990px) {
+}

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/assets/img/32x32.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/course.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.0/dist/sweetalert2.min.css">
+    <title>Evaluasi - Listrik Dinamis</title>
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="nav">
+      
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 my-3">
+          <div class="card shadow h-100 rounded-0">
+            <div class="card-body">
+              <h4>Evaluasi</h4>
+              <hr>
+              <div class="form-group mt-5">
+                <label for="">Nama</label>
+                <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama ....." autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="">Kelas</label>
+                <input type="text" id="kelas" class="form-control" placeholder="Masukkan Kelas ....." autocomplete="off">
+              </div>
+              <div class="form-group my-4">
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary rounded-0" id="masuk" type="button">Mulai</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-12 my-3">
+          <div class="card shadow rounded-0">
+            <div class="card-body">
+              <h4>Petunjuk Mengerjakan</h4>
+              <hr>
+              <div class="course">
+                <ul>
+                  <li>Masukkan <b>'Nama'</b> dan <b>'Kelas'</b> anda pada kolom yang tersedia. Tekan tombol <b>'Mulai'</b> untuk masuk ke laman latihan.</li>
+                  <li>Pada bagian kanan laman terdapat navigasi nomor soal yang apabila di klik atau tekan akan menampilkan soal berdasarkan nomor soal yang di klik.</li>
+                  <li>Jumlah soal sebanyak 10 butir berupa pilihan ganda.</li>
+                  <li>Waktu pengerjaan soal adalah 60 menit. Jika waktu pengerjaan habis, maka akan dialihkan ke laman hasil.</li>
+                  <li>Klik atau tekan salah satu pilihan jawaban yang dianggap benar.</li>
+                  <li>Tekan tombol selesai pad bagian kanan laman di bawah navigasi nomor soal untuk mengakhiri menjawab.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <div class="container" id="footer">
+    
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Component -->
+    <script src="/components/navbar.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.0/dist/sweetalert2.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const masuk = document.getElementById("masuk");
+        const nama = document.getElementById("nama");
+        const kelas = document.getElementById("kelas");
+
+        masuk.addEventListener("click", () => {
+          if (nama.value === "" || kelas.value === "") {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Nama dan Kelas tidak boleh kosong!',
+            });
+          } else {
+            var now = Date.now();
+            sessionStorage.setItem('nama', nama.value);
+            sessionStorage.setItem('kelas', kelas.value);
+            sessionStorage.setItem('timer-3', now);
+            location.href = './kuis.html';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

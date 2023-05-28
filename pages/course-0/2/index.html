@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/img/32x32.png" type="image/x-icon">
+  <title>Pendahuluan - Listrik Dinamis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/course.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow">
+    
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-9 col-sm-12" id="course">
+        <div class="course-content">
+          <h1>Pendahuluan</h1>
+          
+          <p>Pada materi listrik dinamis ini, kalian akan diajak untuk menelusuri pergerakan muatan listrik dalam bentuk arus listrik. Selain itu, akan dikenalkan pula berbagai besaran pokok dalam listrik, hukum-hukum kelistrikan, sumber arus listrik, serta energi dan daya listrik yang dihasilkan oleh rangkaian listrik.</p>
+          
+          <p>Begitu banyak manfaat yang dapat dirasakan manusia dengan adanya listrik. Bagaimana jika di dunia ini tidak terdapat listrik? Tentunya, segala aktivitas keseharian manuasia yang tergantung pada listrik akan terganggu. Komputerkomputer di kantor dan mesin-mesin industri tidak dapat bekerja tanpa listrik. Demikian halnya dengan lampu-lampu di jalan juga tidak dapat menyala. Nah, setelah mempelajari tentang listrik dinamis, kalian diharapkan mampu memahami konsep-konsep kelistrikan dan menerapkannya dalam kehidupan sehari-hari.</p>
+        </div>
+        <hr>
+        <div class="row web my-3">
+          <div class="col-lg-6 col-sm-12 my-1 d-grid gap-2">
+            <a href="/pages/course-0/1/" class="btn btn-sm btn-outline-dark" id="back"><i class="fas fa-chevron-left"></i> Sebelumnya</a>
+          </div>
+          <div class="col-lg-6 col-sm-12 text-end my-1 d-grid gap-2">
+            <a href="/pages/course-1/0/" class="btn btn-sm btn-dark next">Selanjutnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-12">
+        <!-- List Course Start -->
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="list-course-content mt-5" id="sidebar">
+          
+          </div>
+        </div>
+        <!-- List Course End -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container" id="footer">
+    
+  </div>
+  <!-- End Footer -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/components/navbar.js"></script>
+  <script src="/components/sidebar.js"></script>
+  <script src="/components/footer.js"></script>
+  <script src="/components/open-course.js"></script>
+  <script type="text/javascript">
+    const next = document.querySelector(".next");
+    
+    next.addEventListener("click", function(e) {
+      e.preventDefault();
+      localStorage.setItem('sub-2-0', '1');
+      location.href = `${next.getAttribute('href')}`;
+    });
+  </script>
+</body>
+</html>

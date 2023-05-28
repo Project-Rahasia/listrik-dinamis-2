@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/img/32x32.png" type="image/x-icon">
+  <title>Kompetensi Dasar - Listrik Dinamis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/course.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow">
+    
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-9 col-sm-12" id="course">
+        <div class="course-content">
+          <h1>Kompetensi Dasar</h1>
+          <p>3.5. Menerapkan konsep rangkaian listrik, energi dan daya listrik, sumber energi listrik dalam kehidupan sehari-hari termasuk sumber energi listrik alternatif.</p>
+          <p>4.5. Menyajikan hasil rancangan berbagai rangkaian listrik.</p>
+        </div>
+        <hr>
+        <div class="row web my-3">
+          <div class="col-lg-6 col-sm-12">
+            <!-- <a href="/" class="btn btn-sm btn-outline-dark" id="back"><i class="fas fa-chevron-left"></i> Sebelumnya</a> -->
+          </div>
+          <div class="col-lg-6 col-sm-12 text-end my-1 text-end d-grid gap-2">
+            <a href="/pages/course-0/1/" class="btn btn-sm btn-dark next">Selanjutnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-12">
+        <!-- List Course Start -->
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="list-course-content mt-5" id="sidebar">
+          
+          </div>
+        </div>
+        <!-- List Course End -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container" id="footer">
+    
+  </div>
+  <!-- End Footer -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/components/navbar.js"></script>
+  <script src="/components/sidebar.js"></script>
+  <script src="/components/footer.js"></script>
+  <script src="/components/open-course.js"></script>
+  <script type="text/javascript">
+    const next = document.querySelector(".next");
+    
+    next.addEventListener("click", function(e) {
+      e.preventDefault();
+      localStorage.setItem('sub-1-1', '1');
+      location.href = `${next.getAttribute('href')}`;
+    });
+  </script>
+</body>
+</html>

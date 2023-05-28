@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/32x32.png"
+      type="image/x-icon"
+    />
+    <title>Hambatan Listrik - Listrik Dinamis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/course.css" />
+    <link rel="stylesheet" href="/assets/css/utils-course.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow"></nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-9 col-sm-12" id="course">
+          <!-- Start Course Content -->
+          <div class="course-content">
+            <h1>Hambatan Listrik</h1>
+
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5>Tujuan Pembelajaran</h5>
+                <div class="course">
+                  <ul>
+                    <li>
+                      Siswa mampu mengukur kuat arus listrik dan beda potensial
+                      pada rangkaian tertutup dengan benar
+                    </li>
+                    <li>
+                      Siswa mampu menyelidiki hubungan antara kuat arus dan beda
+                      potensial listrik dengan baik
+                    </li>
+                    <li>
+                      Siswa mampu menerapkan hukum ohm pada rangkaian seri dan
+                      dan paralel dengan baik
+                    </li>
+                    <li>
+                      Siswa mampu menentukan perbedaan hambatan beberapa jenis
+                      bahan konduktor dan isolator dengan benar
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Sifat-sifat yang menentukan jumlah arus listrik yang akan mengalir
+              disebut resistansi (hambatan). Resistansi (hambatan) ditentukan
+              dengan memberikan beda potensial di antara dua titik pada
+              konduktor dan mengukur arusnya. Hambatan listrik ($R$)
+              didefinisikan sebagai rasio atau perbandingan antara beda
+              potensial listrik ($V$) dengan arus listrik ($I$).
+            </p>
+
+            <p>
+              Hal ini didasarkan pada percobaan yang dilakukan oleh George Simon
+              Ohm (1787-1854) tentang hubungan arus listrik dan beda potensial.
+              Dari hasil percobaannya, Ohm menyimpulkan bahwa kuat arus yang
+              mengalir pada penghantar sebanding dengan beda potensial yang
+              terdapat pada ujung-ujung penghantar. Supaya lebih mudah dipahami,
+              lakukan percobaan berikut.
+            </p>
+
+            <div class="card my-3">
+              <div class="card-body">
+                <img
+                  src="/assets/img/mari-mencoba.png"
+                  alt=""
+                  class="img-fluid mx-auto d-block mb-2"
+                  width="300"
+                />
+
+                <h5>Tujuan Percobaan:</h5>
+                <p>
+                  Mengetahui perbandingan nilai antara beda potensial listrik (V) dengan arus listrik (I).
+                </p>
+                <h5>Cara Kerja:</h5>
+                <div class="course">
+                  <ol>
+                    <li>
+                      Susunlah rangkaian listrik beserta amperemeter dan
+                      voltmeter pada Virtual Lab Interaktif seperti gambar
+                      berikut.
+                      <img src="./img/1.png" alt="" class="img-fluid d-block" />
+                    </li>
+                    <li>
+                      Masukkan data hasil pembacaan amperemeter dan voltmeter ke
+                      dalam tabel pengamatan.
+                    </li>
+                    <li>
+                      Tambahkan tegangan pada baterai dengan cara menekan
+                      baterai kemudian geser sesuai besar tegangan yang
+                      diinginkan. Masukkan hasil pengukuran pada tabel.
+                    </li>
+                    <li>Jangan mengubah besar hambatan pada lampu</li>
+                  </ol>
+                </div>
+
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    class="embed-responsive-item"
+                    width="100%"
+                    height="500px"
+                    src="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/1.2.7/circuit-construction-kit-dc-virtual-lab_in.html"
+                  ></iframe>
+                </div>
+
+                <h5>Hasil Percobaan:</h5>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr class="text-center">
+                        <th>No</th>
+                        <th>Tegangan Listrik (V)</th>
+                        <th>Kuat Arus (I)</th>
+                        <th>$\frac{V}{I}$</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-center">
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center tegangan"
+                            placeholder="....."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center arus"
+                            placeholder="....."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center banding"
+                            placeholder="....."
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center tegangan"
+                            placeholder="....."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center arus"
+                            placeholder="....."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center banding"
+                            placeholder="....."
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center tegangan"
+                            placeholder="....."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center arus"
+                            placeholder="....."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center banding"
+                            placeholder="....."
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center tegangan"
+                            placeholder="....."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center arus"
+                            placeholder="....."
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="form-control text-center banding"
+                            placeholder="....."
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="text-center">
+                  <button
+                    id="check-percobaan"
+                    class="btn btn-md btn-check-answer shadow"
+                  >
+                    Cek Jawaban
+                  </button>
+                </div>
+
+                <p>
+                  Setelah melakukan kegiatan tersebut, cobalah amati
+                  perbandingan nilai $\frac{V}{I}$, kemudian jawablah pertanyaan
+                  berikut!
+                </p>
+                <p>
+                  Apakah hasil dari seluruh $\frac{V}{I}$ sama atau berbeda?
+                </p>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="pertanyaan-satu"
+                    id="pertanyaan-satu-1"
+                    value="true"
+                  />
+                  <label class="form-check-label fs-5" for="pertanyaan-satu-1">
+                    a. Ya, hasilnya tetap dan sama
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="pertanyaan-satu"
+                    id="pertanyaan-satu-2"
+                    value="false"
+                  />
+                  <label class="form-check-label fs-5" for="pertanyaan-satu-2">
+                    b. Tidak, hasilnya berbeda dan berubah-ubah
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Nah, apabila percobaan di atas dilakukan dengan benar, maka akan
+              diketahui bahwa jika perbandingan nilai $\frac{V}{I}$ dari hasil
+              percobaan diamati, maka akan diketahui perbandingan nilai yang
+              selalu tetap pada setiap pengukuran. Perbandingan nilai tersebut
+              lah yang dinamakan hambatan listrik atau resistansi dan dinyatakan
+              dalam satuan ohm ($\Omega$). Dengan demikian, didapatkan persamaan
+              hukum ohm sebagai berikut.
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-3">
+                <p class="math border border-dark">$R = \frac{V}{I}$</p>
+              </div>
+            </div>
+
+            <p>
+              Keterangan: <br />
+              $R$ : kuat arus listrik (ampere) <br />
+              $V$ : beda potensial (volt) <br />
+              $I$ : hambatan (ohm/ $\Omega$)
+            </p>
+
+            <p>
+              Tahukah kamu? Setiap bahan memiliki kemampuan yang berbeda dalam
+              menghantarkan listrik. Sering kita melihat orang menggunakan kabel
+              untuk menghantarkan listrik dari suatu ujung kabel ke ujung
+              lainnya. Mengapa menggunakan kabel? Kabel biasanya terdiri atas
+              bahan tembaga atau perak di bagian dalamnya dan dilapisi bahan
+              plastik atau karet di bagian luarnya seperti pada Gambar 2.
+              Mengapa demikian? Hal ini berkaitan dengan kemampuan bahan untuk
+              menghantarkan listrik. Tembaga dan perak merupakan bahan yang
+              paling baik untuk menghantarkan listrik, sedangkan plastik dan
+              karet merupakan bahan yang tidak dapat menghantarkan listrik. Daya
+              hantar listrik pada bahan terbagi menjadi 3, yaitu konduktor
+              listrik, isolator listrik, dan semikonduktor listrik.
+            </p>
+
+            <div class="row justify-content-center text-center my-3">
+              <div class="col-md-5 col-sm-12">
+                <img
+                  src="./img/kabel.jpg"
+                  alt="Kabel listrik dengan pelapis plastik"
+                  class="img-fluid border"
+                />
+                <small class="src-text d-block"
+                  >Gambar 2. Kabel listrik dengan pelapis plastik</small
+                >
+              </div>
+            </div>
+
+            <h5>a. Konduktor Listrik</h5>
+            <p>
+              Mengapa kabel digunakan untuk mengalirkan arus listrik dari sumber
+              listrik ke peralatan elektronik? Agar arus listrik dapat
+              disalurkan dengan baik, maka dibutuhkan bahan yang mampu
+              menghantarkan arus listrik dengan baik pula. Pada bahan ini,
+              elektron dapat mengalir dengan mudah. Bahan-bahan yang dapat
+              digunakan untuk menghantarkan listrik disebut dengan konduktor
+              listrik.
+            </p>
+
+            <div class="row justify-content-center text-center my-3">
+              <div class="col-md-5 col-sm-12">
+                <img
+                  src="./img/konduktor-listrik.jpg"
+                  alt="Kabel listrik dengan pelapis plastik"
+                  class="img-fluid border"
+                />
+                <small class="src-text d-block"
+                  >Gambar 3. Konduktor listrik</small
+                >
+              </div>
+            </div>
+
+            <p>
+              Contoh dari konduktor listrik adalah tembaga, perak, dan emas.
+              Meskipun perak dan emas merupakan konduktor yang sangat baik,
+              tetapi karena harganya yang sangat mahal, kabel rumah tangga
+              biasanya menggunakan bahan dari tembaga.
+            </p>
+
+            <h5>b. Isolator Listrik</h5>
+            <p>
+              Mengapa kabel listrik perlu dilapisi dengan plastik atau karet?
+              Pemberian plastik atau karet sebagai pelapis kabel bertujuan agar
+              kabel lebih aman digunakan. Sifat plastik dan karet tidak dapat
+              menghantarkan arus listrik sehingga kedua bahan tersebut masuk ke
+              dalam kelompok bahan isolator. Bahan isolator ini adalah bahan
+              yang sangat buruk untuk menghantarkan listrik karena di dalam
+              bahan ini elektron sulit mengalir.
+            </p>
+
+            <div class="row justify-content-center text-center my-3">
+              <div class="col-md-5 col-sm-12">
+                <img
+                  src="./img/isolator-listrik.jpg"
+                  alt="Kabel listrik dengan pelapis plastik"
+                  class="img-fluid border"
+                />
+                <small class="src-text d-block"
+                  >Gambar 4. Isolator listrik berbahan karet</small
+                >
+              </div>
+            </div>
+
+            <h5>c. Semikonduktor Listrik</h5>
+            <p>
+              Bahan semikonduktor listrik adalah bahan-bahan yang jika berada
+              pada suhu rendah bersifat sebagai isolator, sementara pada suhu
+              tinggi bersifat sebagai konduktor. Contoh bahan semikonduktor
+              listrik adalah karbon, silikon, dan germanium. Pada bidang
+              elektronika, bahan semikonduktor digunakan untuk membuat
+              transistor yang kemudian dirangkai menjadi integrated circuit (IC)
+              seperti pada Gambar 3.
+            </p>
+
+            <div class="row justify-content-center text-center my-3">
+              <div class="col-md-5 col-sm-12">
+                <img
+                  src="./img/ic.jpg"
+                  alt="Integrated Circuit (IC)"
+                  class="img-fluid border"
+                />
+                <small class="src-text d-block"
+                  >Gambar 3. Integrated Circuit (IC)</small
+                >
+              </div>
+            </div>
+
+            <p>
+              Kemampuan penghantaran listrik pada bahan tergantung pada nilai
+              hambatan jenis suatu benda atau bahan. Semakin kecil hambatan
+              jenis suatu bahan, semakin baik kemampuan bahan tersebut untuk
+              menghantarkan listrik. Tabel berikut menyajikan beberapa nilai
+              hambatan jenis bahan.
+            </p>
+
+            <div
+              class="table-responsive col-lg-6 mx-auto"
+            >
+              <small class="src-text d-block text-center fs-5"
+                >Tabel 1. Hambatan jenis bahan</small
+              >
+              <table class="table table-bordered text-center fs-6">
+                <thead>
+                  <tr>
+                    <th width="50%">Bahan</th>
+                    <th width="50%">Hambatan Jenis pada Suhu 20℃ (Ωm)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th colspan="2">Konduktor</th>
+                  </tr>
+                  <tr>
+                    <td>Aluminium</td>
+                    <td>$2,82 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <td>Tembaga</td>
+                    <td>$1,72 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <td>Emas</td>
+                    <td>$2,44 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <td>Besi</td>
+                    <td>$9,71 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <td>Konstantan</td>
+                    <td>$49 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <td>Nikrom</td>
+                    <td>$100 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <td>Platina</td>
+                    <td>$10,6 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <td>Perak</td>
+                    <td>$1,59 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <td>Tungsten</td>
+                    <td>$5,65 \times 10^{-8}$</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Semikonduktor</th>
+                  </tr>
+                  <tr>
+                    <td>Karbon (grafit)</td>
+                    <td>$3,35 \times 10^{-5}$</td>
+                  </tr>
+                  <tr>
+                    <td>Germanium (murni)</td>
+                    <td>$5 \times 10^{-4}$</td>
+                  </tr>
+                  <tr>
+                    <td>Silikon (murni)</td>
+                    <td>$6,4 \times 10^{2}$</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Isolator</th>
+                  </tr>
+                  <tr>
+                    <td>Kaca</td>
+                    <td>$10^{10} \times 10^{14}$</td>
+                  </tr>
+                  <tr>
+                    <td>Kuarsa</td>
+                    <td>$7,5 \times 10^{17}$</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              Besar hambatan setiap jenis kawat yang panjangnya satu satuan
+              panjang per satu satuan luas penampang disebut hambatan jenis
+              ($\rho$). Besar hambatan jenis berbeda-beda untuk setiap jenis
+              kawat (lihat Tabel 1), sehingga dapat dituliskan:
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-3">
+                <p class="math border border-dark">$R = \rho . \frac{L}{A}$</p>
+              </div>
+            </div>
+
+            <p>
+              Keterangan: <br />
+              $R$ : hambatan kawat ($\Omega$) <br />
+              $\rho$ : hambatan jenis kawat ($\Omega$m) <br />
+              $L$ : panjang kawat (m) <br />
+              $A$ : luas penampang kawat ($m^{2}$)
+            </p>
+
+            <div class="card my-3">
+              <div class="card-body">
+                <img
+                  src="/assets/img/maripahami.png"
+                  alt="Mari Pahami"
+                  class="img-fluid"
+                  width="200"
+                />
+
+                <div class="course">
+                  <ol>
+                    <li>
+                      Kawat dengan panjang 30 meter mempunyai luas penampang 0,3
+                      $mm^{2}$. Jika hambatan jenis kawat sebesar $10^{-6}
+                      \Omega$m, berapakah hambatan listrik kawat tersebut?
+                      <br />
+                      <b>Penyelesaian:</b> <br />
+                      <b>Diketahui:</b> <br />
+                      $L$ = 30 m <br />
+                      $A$ = 0,3 $mm^{2}$ = $3,10^{-7} m^{2}$ <br />
+                      $\rho$ = $10^{-6} \Omega$m <br />
+                      <b>Ditanyakan: R</b> <br />
+                      <b>Jawab:</b> <br />
+                      <span id="math">$R = \rho . \frac{L}{A}$</span> <br />
+                      <span id="math"
+                        >$= 10^{-6} . \frac{30}{3 \times 10^{-7}}$</span
+                      >
+                      <br />
+                      <span id="id">$= 10 \Omega$</span> <br />
+                      Jadi, hambatan listrik kawat adalah 100 $\Omega$.
+                    </li>
+                    <li>
+                      Sebuah kawat penghantar mempunyai hambatan 4 $\Omega$.
+                      Berapa beda tegangan yang harus dipasang pada ujung-ujung
+                      kawat agar dihasilkan arus listrik 5 ampere? <br />
+                      <b>Penyelesaian:</b> <br />
+                      <b>Diketahui:</b> <br />
+                      <table>
+                        <tr>
+                          <td>
+                            $R = $
+                            <input type="text" class="pahami-1" size="5" />
+                            $\Omega$
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            $I = $
+                            <input type="text" class="pahami-1" size="5" />
+                            $A$
+                          </td>
+                        </tr>
+                      </table>
+                      <b>Ditanyakan: $V$</b> <br />
+                      <b>Jawab:</b> <br />
+                      <span id="math">$V = I \times R$</span> <br />
+
+                      <table>
+                        <tr>
+                          <td>
+                            $V = $
+                            <input type="text" class="pahami-1" size="5" />
+                            $\times$
+                            <input type="text" class="pahami-1" size="5" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            $V = $
+                            <input type="text" class="pahami-1" size="5" /> volt
+                          </td>
+                        </tr>
+                      </table>
+
+                      <div class="text-center">
+                        <button
+                          id="check-pahami-1"
+                          class="btn btn-md btn-check-answer shadow"
+                        >
+                          Cek Jawaban
+                        </button>
+                      </div>
+                      <h1 id="message-pahami-1" class="mt-3"></span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="card my-3">
+              <div class="card-body">
+                <img
+                  src="/assets/img/mariberlatih.png"
+                  alt="Mari Berlatih"
+                  class="img-fluid"
+                  width="200"
+                />
+
+                <div class="quiz-container-2">
+                  <div id="quiz"></div>
+                </div>
+                <hr />
+                <div class="btn-action text-center">
+                  <button id="check" class="btn btn-md btn-check-answer shadow">
+                    Cek Jawaban
+                  </button>
+                  <button id="next" class="btn btn-md btn-secondary shadow">
+                    Soal Selanjutnya
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Course Content -->
+          <hr />
+          <div class="row web my-3">
+            <div class="col-lg-6 col-sm-12 my-1 d-grid gap-2">
+              <a
+                href="/pages/course-1/1/"
+                class="btn btn-sm btn-outline-dark"
+                id="back"
+                ><i class="fas fa-chevron-left"></i> Sebelumnya</a
+              >
+            </div>
+            <div class="col-lg-6 col-sm-12 text-end my-1 d-grid gap-2">
+              <a href="/pages/course-1/3/" class="btn btn-sm btn-dark next"
+                >Selanjutnya <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-12">
+          <!-- List Course Start -->
+          <div class="position-sticky" style="top: 2rem">
+            <div class="list-course-content mt-5" id="sidebar"></div>
+          </div>
+          <!-- List Course End -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container" id="footer"></div>
+    <!-- End Footer -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/components/navbar.js"></script>
+    <script src="/components/sidebar.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="./soal.js"></script>
+    <script src="./script.js"></script>
+    <script src="/components/open-course.js"></script>
+    <script type="text/javascript">
+      const next = document.querySelector(".next");
+      
+      next.addEventListener("click", function(e) {
+        e.preventDefault();
+        localStorage.setItem('sub-2-3', '1');
+        location.href = `${next.getAttribute('href')}`;
+      });
+    </script>
+
+    <!-- Mathjax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </body>
+</html>

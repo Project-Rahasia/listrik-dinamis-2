@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/img/32x32.png" type="image/x-icon">
+  <title>Kuis - Listrik Dinamis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/course.css">
+  <link rel="stylesheet" href="/assets/css/utils-course.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow">
+    
+  </nav>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-lg-9 col-sm-12" id="course">
+        <!-- Start Course Content -->
+        <div class="course-content mb-5">
+          
+          <div class="text-center my-5">
+            <p class="text-center mb-5">Jawaban benar: <span id="correct"></span>, Jawaban Salah <span id="wrong"></span></p>
+            <h1>Nilai Anda</h1>
+            <h1 class="score mb-1"></h1>
+            <h4 class="message mb-5"></h4>
+            <a href="./index.html" class="btn btn-sm btn-outline-danger px-5 py-2 rounded-0 retry">Kerjakan Ulang</a>
+          </div>
+          
+        </div>
+        <!-- End Course Content -->
+        <hr>
+        <div class="row web my-3">
+          <div class="col-lg-6 col-sm-12 my-1 d-grid gap-2">
+            <a href="/pages/course-2/4/" class="btn btn-sm btn-outline-dark" id="back"><i class="fas fa-chevron-left"></i> Sebelumnya</a>
+          </div>
+          <div class="col-lg-6 col-sm-12 text-end my-1 d-grid gap-2">
+            <a href="/pages/course-3/0/" class="btn btn-sm btn-dark next">Selanjutnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container" id="footer">
+    
+  </div>
+  <!-- End Footer -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+  <script src="/components/navbar.js"></script>
+  <script src="/components/footer.js"></script>
+
+  <script type="module">
+    const length = sessionStorage.getItem('length-2');
+    const correct = sessionStorage.getItem('correct-2');
+    const wrong = sessionStorage.getItem('wrong-2');
+    const name = sessionStorage.getItem('nama');
+    const kelas = sessionStorage.getItem('kelas');
+
+    let score = (correct/length) * 100;
+
+    document.querySelector(".score").innerHTML = Math.ceil(score);
+    document.querySelector("#correct").innerHTML = correct;
+    document.querySelector("#wrong").innerHTML = wrong;
+
+    const message = document.querySelector(".message");
+    const next = document.querySelector(".next");
+
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDvj3Ac_53u-3GgHHEVTP0lnnTvO8-xPHw",
+      authDomain: "latihan-listrik-dinamis.firebaseapp.com",
+      projectId: "latihan-listrik-dinamis",
+      storageBucket: "latihan-listrik-dinamis.appspot.com",
+      messagingSenderId: "75775330904",
+      appId: "1:75775330904:web:afa120633d28b3e4ed182d"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import { getFirestore, collection, getDocs, addDoc, query, where } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-firestore.js";
+
+    const db = getFirestore(app);
+    const d = new Date();
+    const date = `${d.getDate()}-${d.getMonth()}-${d.getFullYear()}`;
+    // Add Data
+    async function addData() {
+      try {
+        const docRef = await addDoc(collection(db, "kuis-2"), {
+          nama: name,
+          kelas: kelas,
+          nilai: score,
+          tanggal: date
+        });
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    }
+
+    // Get KKM
+    async function getKkm () {
+      let kkm = null;
+      const q = query(collection(db, "tb-kkm"), where("idData", "==", 1));
+
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        kkm = doc.data().kkm;
+      });
+      return kkm;
+    }
+
+    const kkm = await getKkm();
+
+    function removeStorage() {
+      sessionStorage.removeItem('length-2');
+      sessionStorage.removeItem('correct-2');
+      sessionStorage.removeItem('wrong-2');
+      sessionStorage.removeItem('nama');
+      sessionStorage.removeItem('kelas');
+      sessionStorage.removeItem('timer-2');
+      sessionStorage.removeItem('jawaban-2');
+    }
+
+    if (!sessionStorage.getItem('nama')) {
+      removeStorage();
+      window.location = './';
+    } else {
+      if (score < kkm) {
+        next.classList.add("disabled");
+        addData();
+        message.innerText = `Maaf anda belum lulus, nilai minimal yang harus anda dapatkan ${kkm}. Silahkan kerjakan ulang.`;
+      } else {
+        addData();
+        next.classList.remove("disabled");
+        message.innerText = `Selamat anda anda lulus. Silahkan lanjut kemateri berikutnya.`;
+      }
+    }
+
+    const retry = document.querySelector(".retry");
+    retry.addEventListener("click", (e) => {
+      e.preventDefault();
+      removeStorage();
+      window.location = './';
+    });
+
+    next.addEventListener("click", (e) => {
+      e.preventDefault();
+      removeStorage();
+      const href = next.getAttribute('href');
+      localStorage.setItem('sub-4-0', '1');
+      window.location = href;
+    });
+  </script>
+</body>
+</html>

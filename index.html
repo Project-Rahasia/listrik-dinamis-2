@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/img/32x32.png" type="image/x-icon">
+  <title>Listrik Dinamis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-transparent border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="/assets/img/32x32.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        Listrik Dinamis
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+          <a class="nav-link mr-3" href="/about.html">Tentang</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="/teachers/index.html">Guru</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Hero -->
+  <div class="container container-banner mt-5">
+    <div class="row d-flex flex-row-reverse">
+      <div class="col-12 col-lg-7 col-md-7">
+        <img src="/assets/img/banner.gif" alt="Logo" class="img-fluid d-block mx-auto border-0" width="800">
+      </div>
+      <div class="col-12 col-lg-5 col-md-5">
+        <div class="py-5 mt-5">
+          <h2 class="mb-3">Listrik Dinamis</h2>
+          <p class="mb-5">Media Pembelajaran Listrik Dinamis</p>
+
+          <a href="/pages/course-0/0/" class="btn btn-md btn-start px-5 next">Mulai Belajar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hero -->
+  
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+    const next = document.querySelector(".next");
+    
+    next.addEventListener("click", function(e) {
+      e.preventDefault();
+      localStorage.setItem('sub-1-0', '1');
+      location.href = `${next.getAttribute('href')}`;
+    });
+  </script>
+</body>
+</html>

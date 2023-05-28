@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3F3F46;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+p {
+  color: #3F3F46;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+.btn-start {
+  background-color: #3F3F46;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  transition: 0.3s;
+}
+
+.btn-start:hover {
+  background-color: #17171a;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .container-banner {
+    text-align: center;
+  }
+}

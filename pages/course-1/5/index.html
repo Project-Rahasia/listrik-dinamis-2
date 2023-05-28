@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/32x32.png"
+      type="image/x-icon"
+    />
+    <title>Karakteristik Rangkaian Listrik - Listrik Dinamis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/course.css" />
+    <link rel="stylesheet" href="/assets/css/utils-course.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow"></nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-9 col-sm-12" id="course">
+          <!-- Start Course Content -->
+          <div class="course-content">
+            <h1>Karakteristik Rangkaian Listrik</h1>
+
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5>Tujuan Pembelajaran</h5>
+                <div class="course">
+                  <ul>
+                    <li>
+                      Siswa mampu mengukur kuat arus listrik dan beda potensial
+                      pada rangkaian tertutup dengan benar
+                    </li>
+                    <li>
+                      Siswa mampu menyelidiki hubungan antara kuat arus dan beda
+                      potensial listrik dengan baik
+                    </li>
+                    <li>
+                      Siswa mampu menerapkan hukum ohm pada rangkaian seri dan
+                      dan paralel dengan baik
+                    </li>
+                    <li>
+                      Siswa mampu menentukan perbedaan hambatan beberapa jenis
+                      bahan konduktor dan isolator dengan benar
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h4>Rangkaian Hambatan Listrik</h4>
+
+            <p>
+              Pada suatu rangkaian listrik, hambatan listrik juga dapat dipasang
+              secara seri dan paralel seperti pada lampu dan baterai. Untuk
+              memudahkan dalam mencari nilai hambatan pengganti, maka harus
+              diketahui dahulu apakah rangkaian tersebut seri atau paralel,
+              kemudian dihitung menggunakan rumus berikut.
+            </p>
+
+            <h5>1) Rangkaian Seri</h5>
+
+            <p>Perhatikan rangkaian pada Gambar 8 berikut.</p>
+
+            <div class="row justify-content-center text-center my-3">
+              <div class="col-md-7 col-sm-12">
+                <img
+                  src="./img/8.png"
+                  alt="Rangkaian hambatan seri"
+                  class="img-fluid border"
+                />
+                <small class="src-text d-block"
+                  >Gambar 10. Rangkaian hambatan seri</small
+                >
+              </div>
+            </div>
+
+            <p>
+              Arus listrik yang mengalir pada tiap hambatan dalam rangkaian seri
+              adalah sama, sehingga dapat dituangkan dalam persamaan berikut.
+            </p>
+
+            <p>
+              $V_{AD} = V_{AB} + V_{BC} + V_{CD}$ <br />
+              $V_{AD} = I . R_{1} + I . R_{2} + I . R_{3}$ <br />
+              $I. R_{S} = I (R_{1} + R_{2} + R_{3})$
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-5">
+                <p class="math border border-dark">
+                  $R_{S} = R_{1} + R_{2} + R_{3}$
+                </p>
+              </div>
+            </div>
+
+            <h5>2) Rangkaian Paralel</h5>
+
+            <p>Perhatikan rangkaian pada Gambar 9 berikut.</p>
+
+            <div class="row justify-content-center text-center my-3">
+              <div class="col-md-7 col-sm-12">
+                <img
+                  src="./img/9.png"
+                  alt="Rangkaian hambatan paralel"
+                  class="img-fluid border"
+                />
+                <small class="src-text d-block"
+                  >Gambar 11. Rangkaian hambatan paralel</small
+                >
+              </div>
+            </div>
+
+            <p>
+              Gambar 11 menunjukkan resistor atau hambatan yang disusun secara
+              paralel. Jika tiga resistor disusun secara paralel dan ujung-ujung
+              ketiga cabang bertemu, hambatan total dapat dihitung dengan
+              persamaan berikut.
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-5">
+                <p class="math border border-dark">
+                  $\frac{1}{R_{P}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} +
+                  \frac{1}{R_{3}}$
+                </p>
+              </div>
+            </div>
+
+            <p>
+              Kuat arus listrik yang masuk sama dengan kuat arus listrik yang
+              keluar sehingga hubungannya adalah sebagai berikut.
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-5">
+                <p class="math border border-dark">
+                  $I_{1} + I_{2} + I_{3} = I_{total}$
+                </p>
+              </div>
+            </div>
+
+            <p>
+              Adapun beda potensial di antara ujung-ujung voltmeter sama dengan
+              beda potensial di antara ujung-ujung komponen rangkaian.
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-5">
+                <p class="math border border-dark">$V_{1} = V_{2} = V_{3}$</p>
+              </div>
+            </div>
+
+            <div class="card my-3">
+              <div class="card-body">
+                <img
+                  src="/assets/img/maripahami.png"
+                  alt="Mari Pahami"
+                  class="img-fluid"
+                  width="200"
+                />
+
+                <ol>
+                  <li>
+                    <p>
+                      Diketahui empat buah resistor dengan besar hambatan
+                      masing-masing adalah $ 3 \Omega$, $ 3 \Omega$, $ 5
+                      \Omega$, $ 6 \Omega$. Hitunglah hambatan pengganti
+                      resistor tersebut dalam suatu rangkaian, jika: <br />
+                      a. Resistor disusun secara seri. <br />
+                      b. Resistor disusun secara paralel.
+                    </p>
+
+                    <p>
+                      <b>Penyelesaian:</b> <br />
+                      <b>Diketahui : </b> <br />
+                      <span>$R_{1} = 3 \Omega$</span> <br />
+                      <span>$R_{2} = 3 \Omega$</span> <br />
+                      <span>$R_{3} = 5 \Omega$</span> <br />
+                      <span>$R_{4} = 6 \Omega$</span> <br />
+
+                      <b>Ditanya</b> <br />
+                      a. Resistor disusun secara seri. <br />
+                      b. Resistor disusun secara paralel. <br />
+
+                      <b>Jawab:</b> <br />
+                      a. <span>$R_{s} = R_{1} + R_{2} + R_{3} + R_{4}$</span>
+                      <br />
+                      <span>$R_{s} = 3 + 3 + 5 + 6$</span> <br />
+                      <span>$R_{s} = 17 \Omega$</span> <br />
+
+                      b .
+                      <span
+                        >$ \frac{1}{R_{p}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} +
+                        \frac{1}{R_{3}} + \frac{1}{R_{4}} $</span
+                      >
+                      <br />
+                      <span
+                        >$ \frac{1}{R_{p}} = \frac{1}{3} + \frac{1}{3} +
+                        \frac{1}{5} + \frac{1}{6} $</span
+                      >
+                      <br />
+                      <span
+                        >$ \frac{1}{R_{p}} = \frac{10 + 10 + 6 +5}{30} $</span
+                      >
+                      <br />
+                      <span>$ \frac{1}{R_{p}} = \frac{31}{30} $</span> <br />
+                      <span>$ R_{p}= \frac{31}{30} \Omega $</span> <br />
+                      <span
+                        >Jadi, besarnya $R_{s}=17 \Omega$, sedangkan besarnya
+                        $R_{p} = \frac{31}{30} \Omega$.</span
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Hitunglah hambatan pengganti untuk resistor-resistor pada
+                      rangkaian berikut.
+                    </p>
+                    <img
+                      src="./img/contoh-1.png"
+                      alt="gambar"
+                      class="d-block img-fluid"
+                      width="200"
+                    />
+                    <p>
+                      <b>Penyelesaian:</b> <br />
+                      <b>Diketahui : </b> <br />
+                    </p>
+
+                    <table>
+                      <tr>
+                        <td>
+                          $R_{1} = $
+                          <input type="text" class="pahami-1" size="3" />
+                          $\Omega$
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          $R_{2} = $
+                          <input type="text" class="pahami-1" size="3" />
+                          $\Omega$
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          $R_{3} = $
+                          <input type="text" class="pahami-1" size="3" />
+                          $\Omega$
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          $R_{4} = $
+                          <input type="text" class="pahami-1" size="3" />
+                          $\Omega$
+                        </td>
+                      </tr>
+                    </table>
+
+                    <p>
+                      <b>Ditanyakan: </b> Hambatan pengganti resistor
+                      (R<sub>AC</sub>) <br />
+
+                      <b>Jawab:</b> <br />
+
+                      Hambatan total resistor $R_{AC} = R_{AB} + R_{BC}$ <br />
+                      Terlebih dahulu hitung $R_{BC}$ <br />
+                      <span
+                        >$ \frac{1}{R_{BC}} = \frac{1}{R_{2}} + \frac{1}{R_{3}}
+                        + \frac{1}{R_{4}} $</span
+                      >
+                    </p>
+
+                    <table class="mb-2">
+                      <tr>
+                        <th rowspan="2">$ \frac{1}{R_{BC}} = $</th>
+                        <td
+                          style="
+                            border-bottom: 3px solid black;
+                            text-align: center;
+                          "
+                        >
+                          $1$
+                        </td>
+                        <td rowspan="2">$ + $</td>
+                        <td
+                          style="
+                            border-bottom: 3px solid black;
+                            text-align: center;
+                          "
+                        >
+                          $1$
+                        </td>
+                        <td rowspan="2">$ + $</td>
+                        <td
+                          style="
+                            border-bottom: 3px solid black;
+                            text-align: center;
+                          "
+                        >
+                          $1$
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="text" class="pahami-1" size="1" />
+                        </td>
+                        <td>
+                          <input type="text" class="pahami-1" size="1" />
+                        </td>
+                        <td>
+                          <input type="text" class="pahami-1" size="1" />
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table class="mb-2">
+                      <tr>
+                        <th rowspan="2">$ \frac{1}{R_{BC}} = $</th>
+                        <td style="border-bottom: 3px solid black">
+                          <input type="text" class="pahami-1" size="1" />
+                          $+$
+                          <input type="text" class="pahami-1" size="1" />
+                          $+$
+                          <input type="text" class="pahami-1" size="1" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">
+                          <input type="text" class="pahami-1" size="1" />
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table class="mb-2">
+                      <tr>
+                        <th rowspan="2">$ \frac{1}{R_{BC}} = $</th>
+                        <td style="border-bottom: 3px solid black">
+                          <input type="text" class="pahami-1" size="1" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">
+                          <input type="text" class="pahami-1" size="1" />
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table class="mb-2">
+                      <tr>
+                        <td>$R_{BC} = $</td>
+                        <td>
+                          <input type="text" class="pahami-1" size="1" />
+                          $\Omega$
+                        </td>
+                      </tr>
+                    </table>
+
+                    <p>
+                      Dengan demikian, besar $R_{AC}$ dapat dihitung dengan
+                      persamaan berikut. <br />
+                      $R_{AC} = R_{AB} + R_{BC}$
+                    </p>
+
+                    <table class="mb-2">
+                      <tr>
+                        <td>$R_{AC} = $</td>
+                        <td>
+                          <input type="text" class="pahami-1" size="1" />
+                          $+$
+                          <input type="text" class="pahami-1" size="1" />
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table class="mb-2">
+                      <tr>
+                        <td>$R_{AC} = $</td>
+                        <td>
+                          <input type="text" class="pahami-1" size="1" />
+                          $\Omega$
+                        </td>
+                      </tr>
+                    </table>
+
+                    <div class="text-center">
+                      <button
+                        id="check-pahami-1"
+                        class="btn btn-md btn-check-answer shadow"
+                      >
+                        Cek Jawaban
+                      </button>
+                    </div>
+                    <h1 id="message-pahami-1" class="mt-2"></h1>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="card my-3">
+              <div class="card-body">
+                <img
+                  src="/assets/img/mariberlatih.png"
+                  alt="Mari Berlatih"
+                  class="img-fluid"
+                  width="200"
+                />
+
+                <div class="quiz-container-3">
+                  <div id="quiz"></div>
+                </div>
+                <hr />
+                <div class="btn-action text-center">
+                  <button id="check" class="btn btn-md btn-check-answer shadow">
+                    Cek Jawaban
+                  </button>
+                  <button id="next" class="btn btn-md btn-secondary shadow">
+                    Soal Selanjutnya
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Course Content -->
+          <hr />
+          <div class="row web my-3">
+            <div class="col-lg-6 col-sm-12 my-1 d-grid gap-2">
+              <a
+                href="/pages/course-1/4/"
+                class="btn btn-sm btn-outline-dark"
+                id="back"
+                ><i class="fas fa-chevron-left"></i> Sebelumnya</a
+              >
+            </div>
+            <div class="col-lg-6 col-sm-12 text-end my-1 d-grid gap-2">
+              <a href="/pages/course-1/6/" class="btn btn-sm btn-dark next"
+                >Selanjutnya <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-12">
+          <!-- List Course Start -->
+          <div class="position-sticky" style="top: 2rem">
+            <div class="list-course-content mt-5" id="sidebar"></div>
+          </div>
+          <!-- List Course End -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container" id="footer"></div>
+    <!-- End Footer -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/components/navbar.js"></script>
+    <script src="/components/sidebar.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="./soal.js"></script>
+    <script src="./script.js"></script>
+    <script src="/components/open-course.js"></script>
+    <script type="text/javascript">
+      const next = document.querySelector(".next");
+      
+      next.addEventListener("click", function(e) {
+        e.preventDefault();
+        localStorage.setItem('sub-2-6', '1');
+        location.href = `${next.getAttribute('href')}`;
+      });
+    </script>
+
+    <!-- Mathjax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </body>
+</html>
